@@ -1,0 +1,35 @@
+{%extends "basicsign.html"%}
+{%load static%} 
+{%block content%}
+	
+	
+	<div class="container-login100" style="background-color: black;">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-50 p-b-30">
+
+			<form action="profile/{{email}}" class="login100-form validate-form" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<span class="login100-form-title p-b-37">
+					Edit Profile
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-25">
+					<input class="input100" type="file" accept="image" name="image" placeholder="Profile" required>
+					<span class="focus-input100"></span>
+				</div>
+				
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn">
+						Continue
+					</button>
+				</div>
+
+				
+			</form>
+			
+			
+		</div>
+	</div>
+	
+	
+
+{%endblock%}
